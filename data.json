@@ -1,0 +1,20 @@
+{
+    "folders":[
+        {
+            "name":"samplefolder1",
+            "serverpath":"sf1",
+            "images":[
+                {
+                    "filename":"1.jpg",
+                    "rating":4,
+                    "delete":false
+                },
+                {
+                    "filename":"2.jpg",
+                    "rating":3,
+                    "delete":false
+                }
+            ]
+        }
+    ]
+}
