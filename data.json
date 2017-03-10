@@ -1,20 +1,81 @@
 {
-    "folders":[
-        {
-            "name":"samplefolder1",
-            "serverpath":"sf1",
-            "images":[
-                {
-                    "filename":"1.jpg",
-                    "rating":4,
-                    "delete":false
-                },
-                {
-                    "filename":"2.jpg",
-                    "rating":3,
-                    "delete":false
-                }
-            ]
-        }
+    "heroes" : [
+      {"id": 11, "name": "Mr. Nice"}
+    ],
+
+    "folders": [
+        {"id": 1, "imageSetId": 1, "path": "2017-01-01 Schlittenfahren in Witten", "visited":false, "touched": false },
+        {"id": 2, "imageSetId": 2, "path": "2017-01-02 Käsekuchen backen", "visited":true, "touched": true },
+        {"id": 3, "imageSetId": 3, "path": "2017-01-03 Ausflug Raketenstation", "visited":true, "touched": false }
+    ],
+
+    "imagesets" : [
+      {
+        "id":1,
+        "folderId": 1, 
+        "images": [
+          {"name": "0001.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0002.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0003.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0004.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg","fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0005.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0006.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0007.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0008.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0009.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0010.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0011.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0012.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0013.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0014.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0015.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"}
+        ]
+      },
+      {
+        "id": 2,
+        "folderId": 2, 
+        "images": [
+          {"name": "0001.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0002.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0003.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0004.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg","fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0005.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0006.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"}
+       
+        ]
+      },
+      {
+        "id": 3,
+        "folderId": 3, 
+        "images": [
+          {"name": "0001.jpg", "stars": 1, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0002.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0003.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0004.jpg", "stars": 1, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg","fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0005.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0006.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0007.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0008.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0009.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0010.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0011.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0012.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0013.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0014.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0015.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0016.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0017.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0018.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0019.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg","fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0020.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0021.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0021.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0022.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"},
+          {"name": "0023.jpg", "stars": 0, "delete": true, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000777/fff.jpg"},
+          {"name": "0024.jpg", "stars": 0, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000222/fff.jpg"},
+          {"name": "0025.jpg", "stars": 3, "delete": false, "url": "https://dummyimage.com/240x240/000222/fff.jpg", "fullurl": "https://dummyimage.com/900x600/000555/fff.jpg"}
+          
+        ]
+      }
     ]
 }
