@@ -36,7 +36,7 @@ module.exports = (function(){
             return;
         } else {
             var parsedData = JSON.parse(data);
-            console.log('Loaded: ' + JSON.stringify(parsedData));
+            console.log('Loaded data...');
             successCb(parsedData);
         }
     }
