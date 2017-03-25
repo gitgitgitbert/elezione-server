@@ -23,7 +23,7 @@ module.exports = (function(){
     // create application/json parser 
     var jsonParser = bodyParser.json()
     
-    var elezione; 
+    var business; 
 
     // create application/x-www-form-urlencoded parser 
     //var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -33,41 +33,62 @@ module.exports = (function(){
         /* FOLDERS */
         app.get('/folders', getFolders);
         app.get('/folders/:id', getSpecificFolder);
-        app.post('/folders', jsonParser, elezione.addFolder);
+        app.post('/folders', jsonParser, addFolder);
 
         /* IMAGESETS */
-        app.get('/imageset/:id', elezione.getSpecificImageSet);
-        app.post('imagesets', jsonParser, elezione.addImageSet);
-        app.get('*', function(req,res){ res.sendStatus(404);})
+        app.get('/imageset/:id', business.getSpecificImageSet);
+        app.post('imagesets', jsonParser, business.addImageSet);
+        app.all('*', function(req,res){ res.sendStatus(404);})
     }
 
-    function getFolders(req,res){
-        var data = elezione.getFolders();
-        if(!data){
-            res.sendStatus(404);
-        }else{
-            res.end(JSON.stringify(data));
-        }    
-    }
 
-    function getSpecificFolder(req, res){
-        var data = elezione.getSpecificFolder(req.params.id);
-        if(!!data){
-            res.end(JSON.stringify(data));
-        }else{
-            res.sendStatus(404);
+    /** Returns the callback function for a common callback handler
+     *  If no data is returned, 404 will be sent. Otherwise the given
+     *  data.
+     */
+    function commonGetHandler(res){
+        return function(data){
+            if(!data){
+                res.sendStatus(404);
+            }else{
+                res.end(JSON.stringify(data));
+            }
         }
     }
 
+    function getFolders(req,res){
+        business.getFolders(commonGetHandler(res));
+    }
 
-    /** Start my restful server */
-    var startServer = function(data){
-        elezione = data;
+    function getSpecificFolder(req, res){
+        business.getSpecificFolder(req.params.id, commonGetHandler(res));
+    }
+
+    function addFolder(req,res){
+        var callback = function(data){
+            if(!data){
+                //TODO: Sending 404 is wrong
+                //Use more callbacks like for errors and so on
+                res.sendStatus(404);
+            }else{
+                res.end(JSON.stringify(data));
+            }   
+        }
+
+        business.addFolder(req.body, callback);
+    }
+
+
+    /** Start my restful server 
+     * Business Layer needs to be provided
+    */
+    var startServer = function(bl){
+        business = bl;
         initServer();
         var server = app.listen(8081, function () {
             var host = server.address().address
             var port = server.address().port
-            console.log("Example app listening at http://%s:%s", host, port)
+            console.log("App listening at http://%s:%s", host, port)
         })
     };
 
